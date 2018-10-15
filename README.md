@@ -1,8 +1,13 @@
 1.目录介绍：</br>
-src/Razor_SHRS/目录下为imu3.0的arduino单片机程序</br>
+3rdparty为安装processing需要的第三方库</br>
+cfg配置文件</br>
+config配置文件</br>
+launch ros启动文件</br>
+magnetometer_calibration imu2.0校正程序</br>
 nodes/imu3_0.py为ros驱动程序（板子输出原始串口数据，转换为ros imu message）</br>
-2.常见问题：</br>
-出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为时间 pitch roll yaw ,但是出厂可能串口输出不是。自己检查一下。</br>
+src/Razor_SHRS/目录下为imu3.0的arduino单片机程序</br>
+2.imu3.0常见问题：</br>
+出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为 roll pitch yaw ,但是出厂可能串口输出不是。自己检查一下。</br>
 *以下为控制输出格式指令*：</br>
 The format of this default string is:</br>
 [timeMS], [accelX], [accelY], [accelZ], [gyroX], [gyroY], [gyroZ], [magX], [magY], [magZ]</br>
