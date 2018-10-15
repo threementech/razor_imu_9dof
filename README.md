@@ -1,3 +1,8 @@
+src/Razor_SHRS/目录下为imu3.0的arduino单片机程序
+nodes/imu3_0.py为ros驱动程序（板子输出原始串口数据，转换为ros imu message）
+出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为时间 raw pitch yaw 可能串口输出不是。自己检查一下。
+
+
 Official ROS Documentation
 --------------------------
 A much more extensive and standard ROS-style version of this documentation can be found on the ROS wiki at:
