@@ -5,7 +5,7 @@ nodes/imu3_0.py为ros驱动程序（板子输出原始串口数据，转换为ro
 出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为时间 pitch roll yaw ,但是出厂可能串口输出不是。自己检查一下。</br>
 *以下为控制输出格式指令*：</br>
 The format of this default string is:</br>
-<timeMS>, <accelX>, <accelY>, <accelZ>, <gyroX>, <gyroY>, <gyroZ>, <magX>, <magY>, <magZ></br>
+[timeMS], [accelX], [accelY], [accelZ], [gyroX], [gyroY], [gyroZ], [magX], [magY], [magZ]</br>
 The string can be modified by sending any of the following commands:</br>
 (SPACE) – Pause/resume serial port printing</br>
 t – Turn time readings on or off</br>
