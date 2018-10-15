@@ -1,26 +1,26 @@
-1.目录介绍：
-src/Razor_SHRS/目录下为imu3.0的arduino单片机程序
-nodes/imu3_0.py为ros驱动程序（板子输出原始串口数据，转换为ros imu message）
-2.常见问题：
-出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为时间 pitch roll yaw ,但是出厂可能串口输出不是。自己检查一下。
-*以下为控制输出格式指令*：
-The format of this default string is:
-<timeMS>, <accelX>, <accelY>, <accelZ>, <gyroX>, <gyroY>, <gyroZ>, <magX>, <magY>, <magZ>
-The string can be modified by sending any of the following commands:
-(SPACE) – Pause/resume serial port printing
-t – Turn time readings on or off
-a – Turn accelerometer readings on or off
-g – Turn gyroscope readings on or off
-m – Turn magnetometer readings on or off
-c – Switch to/from calculated values from/to raw readings
-q – Turn quaternion readings on or off (qw, qx, qy, and qz are printed after mag readings)
-e – Turn Euler angle calculations (pitch, roll, yaw) on or off (printed after quaternions)
-h – Turn heading readings on or off
-r – Adjust log rate in 10Hz increments between 1-100Hz (1, 10, 20, …, 100)
-A – Adjust accelerometer full-scale range. Cycles between ± 2, 4, 8, and 16g.
-G – Adjust gyroscope full-scale range. Cycles between ± 250, 500, 1000, 2000 dps.
-s – Enable/disable SD card logging
-
+1.目录介绍：</br>
+src/Razor_SHRS/目录下为imu3.0的arduino单片机程序</br>
+nodes/imu3_0.py为ros驱动程序（板子输出原始串口数据，转换为ros imu message）</br>
+2.常见问题：</br>
+出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为时间 pitch roll yaw ,但是出厂可能串口输出不是。自己检查一下。</br>
+*以下为控制输出格式指令*：</br>
+The format of this default string is:</br>
+<timeMS>, <accelX>, <accelY>, <accelZ>, <gyroX>, <gyroY>, <gyroZ>, <magX>, <magY>, <magZ></br>
+The string can be modified by sending any of the following commands:</br>
+(SPACE) – Pause/resume serial port printing</br>
+t – Turn time readings on or off</br>
+a – Turn accelerometer readings on or off</br>
+g – Turn gyroscope readings on or off</br>
+m – Turn magnetometer readings on or off</br>
+c – Switch to/from calculated values from/to raw readings</br>
+q – Turn quaternion readings on or off (qw, qx, qy, and qz are printed after mag readings)</br>
+e – Turn Euler angle calculations (pitch, roll, yaw) on or off (printed after quaternions)</br>
+h – Turn heading readings on or off</br>
+r – Adjust log rate in 10Hz increments between 1-100Hz (1, 10, 20, …, 100)</br>
+A – Adjust accelerometer full-scale range. Cycles between ± 2, 4, 8, and 16g.</br>
+G – Adjust gyroscope full-scale range. Cycles between ± 250, 500, 1000, 2000 dps.</br>
+s – Enable/disable SD card logging</br>
+</br>
 /**************************完美分割线×××××××××××××××××××××××××××××××××××××××××××/
 
 Official ROS Documentation
