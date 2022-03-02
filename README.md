@@ -17,8 +17,8 @@ The format of this default string is:</br>
 The string can be modified by sending any of the following commands:</br>
 (SPACE) – Pause/resume serial port printing</br>
 t – Turn time readings on or off</br>
-a – Turn accelerometer readings on or off</br> 单位g
-g – Turn gyroscope readings on or off</br> 单位deg/s
+a – Turn accelerometer readings on or off 单位g </br>
+g – Turn gyroscope readings on or off 单位deg/s </br>
 m – Turn magnetometer readings on or off</br>
 c – Switch to/from calculated values from/to raw readings</br>
 q – Turn quaternion readings on or off (qw, qx, qy, and qz are printed after mag readings)</br>
