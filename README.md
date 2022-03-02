@@ -1,21 +1,24 @@
-1.目录介绍：</br>
-3rdparty为安装processing需要的第三方库</br>
-cfg配置文件</br>
-config配置文件</br>
+
+# 目录介绍：</br>
+3rdparty 为安装processing需要的第三方库</br>
+cfg 配置文件</br>
+config 配置文件</br>
 launch ros启动文件</br>
 magnetometer_calibration imu2.0校正程序</br>
-nodes/imu3_0.py为ros驱动程序（板子输出原始串口数据，转换为ros imu message）</br>
-src/Razor_SHRS/目录下为imu3.0的arduino单片机程序</br>
-2.imu3.0常见问题：</br>
-出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为 roll pitch yaw ,但是出厂可能串口输出不是。自己检查一下。</br>
-*以下为控制输出格式指令*：</br>
+nodes/imu3_0.py 为ros驱动程序（板子输出原始串口数据，转换为ros imu message）</br>
+src/Razor_SHRS/ 目录下为imu3.0的arduino单片机程序</br>
+
+# imu3.0常见问题【只针对v32版本】：</br>
+出现图像不动，echo /imu没有数据，检查一下imu串口输出数据是否和imu3_0.py文件解析对应。imu3_0.py解析格式为 acc gyro quaternion euler ,但是出厂可能串口输出不是。使用下方指令调整到合适输出格式。</br>
+
+## *以下为控制输出格式指令【只针对v32版本】*：</br>
 The format of this default string is:</br>
 [timeMS], [accelX], [accelY], [accelZ], [gyroX], [gyroY], [gyroZ], [magX], [magY], [magZ]</br>
 The string can be modified by sending any of the following commands:</br>
 (SPACE) – Pause/resume serial port printing</br>
 t – Turn time readings on or off</br>
-a – Turn accelerometer readings on or off</br>
-g – Turn gyroscope readings on or off</br>
+a – Turn accelerometer readings on or off</br> 单位g
+g – Turn gyroscope readings on or off</br> 单位deg/s
 m – Turn magnetometer readings on or off</br>
 c – Switch to/from calculated values from/to raw readings</br>
 q – Turn quaternion readings on or off (qw, qx, qy, and qz are printed after mag readings)</br>
@@ -26,8 +29,11 @@ A – Adjust accelerometer full-scale range. Cycles between ± 2, 4, 8, and 16g.
 G – Adjust gyroscope full-scale range. Cycles between ± 250, 500, 1000, 2000 dps.</br>
 s – Enable/disable SD card logging</br>
 </br>
-/**************************完美分割线×××××××××××××××××××××××××××××××××××××××××××/
 
+# sparkfun 文档参考【只针对v32版本】
+https://learn.sparkfun.com/tutorials/9dof-razor-imu-m0-hookup-guide
+
+# ROS官方文档参考 【只针对v23版本】
 Official ROS Documentation
 --------------------------
 A much more extensive and standard ROS-style version of this documentation can be found on the ROS wiki at:
